@@ -1,4 +1,5 @@
 from sweepstakes import Sweepstakes
+from linkedlist import LinkedList
 
 
 def function_one():
@@ -41,7 +42,6 @@ def function_one():
     winner = sweep.select_winner()
     print(f"Congrats to {winner['first_name']} {winner['last_name']} for winning the sweepstakes")
     print("_____________End of 1C_____________")
-    function_two()
 
 def function_two():
     family_members = []
@@ -70,8 +70,20 @@ def function_two():
     }
     family_members.append(middle_sister)
 
+def function_three():
+    list = LinkedList()
+    list.append_node(55)
+    list.append_node(9001)
+    list.append_node(2)
+    list.append_node(1024)
+    list.prepend_node(9999)
+    print(list.contains(9999))
+    print("_____________End of 3 _____________")
+
 def test_method():
     function_one()
+    function_two()
+    function_three()
 
 if __name__ == '__main__':
     test_method()
