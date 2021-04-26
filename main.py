@@ -1,4 +1,6 @@
 from sweepstakes import Sweepstakes
+
+
 def function_one():
     months = ('January','February','March','April','May','June','July','August','September','October','November','December')
     print(months[2])
@@ -31,15 +33,42 @@ def function_one():
         'last_name': "Holmes"
     }
     sweep = Sweepstakes()
-    upload = [customer_one,customer_two,customer_three,customer_four,customer_five]
+
     i = 1
-    for x in upload:
+    for x in [customer_one,customer_two,customer_three,customer_four,customer_five]:
         sweep.add_contestant(i, x)
         i += 1
     winner = sweep.select_winner()
     print(f"Congrats to {winner['first_name']} {winner['last_name']} for winning the sweepstakes")
+    print("_____________End of 1C_____________")
+    function_two()
 
-
+def function_two():
+    family_members = []
+    mother = {
+        'first_name': "Elaine",
+        'last_name': "Peterson",
+        'relationship': "Mother"
+    }
+    family_members.append(mother)
+    father = {
+        'first_name': "Paul",
+        'last_name': "Peterson",
+        'relationship': "Father"
+    }
+    family_members.append(father)
+    sister = {
+        'first_name': "Angela",
+        'last_name': "Weil",
+        'relationship': "Sister"
+    }
+    family_members.append(sister)
+    middle_sister = {
+        'first_name': "Michelle",
+        'last_name': "Johnson",
+        'relationship': "Sister"
+    }
+    family_members.append(middle_sister)
 
 def test_method():
     function_one()
