@@ -1,5 +1,6 @@
 from sweepstakes import Sweepstakes
 from linkedlist import LinkedList
+from tree import Tree
 
 
 def function_one():
@@ -81,10 +82,30 @@ def function_three():
     print(list.contains(9999))
     print("_____________End of 3 _____________")
 
+def function_four():
+    t = Tree()
+    t.insert(35)
+    t.insert(13, t.root)
+    t.insert(11, t.root)
+    t.insert(15, t.root)
+    t.insert(19, t.root)
+    t.insert(99, t.root)
+    t.insert(9001, t.root)
+    t.insert(8263, t.root)
+    t.insert(35, t.root)
+    t.insert(9001, t.root)
+    print(t.search(99))
+    print("pre-ordered")
+    t.pre_order(t.root)
+    print("in order")
+    t.in_order(t.root)
+
+
 def test_method():
     function_one()
     function_two()
     function_three()
+    function_four()
 
 if __name__ == '__main__':
     test_method()
