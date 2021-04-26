@@ -72,11 +72,12 @@ def function_two():
 
 def function_three():
     list = LinkedList()
+    list.prepend_node(9999)
     list.append_node(55)
     list.append_node(9001)
     list.append_node(2)
     list.append_node(1024)
-    list.prepend_node(9999)
+    list.prepend_node(9998)
     print(list.contains(9999))
     print("_____________End of 3 _____________")
 
